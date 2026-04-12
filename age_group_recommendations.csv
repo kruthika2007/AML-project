@@ -1,0 +1,81 @@
+title,avg_user_rating,rating_count,hybrid_score,recommended_for_age_group,reason
+"Shawshank Redemption, The (1994)",4.351351351351352,94,0.9543743001277849,Adults (35+),Trending among this age group
+Saving Private Ryan (1998),4.264705882352941,55,0.7950421811296364,Adults (35+),Trending among this age group
+Star Wars: Episode VI - Return of the Jedi (1983),4.088235294117647,60,0.7897323567184049,Adults (35+),Trending among this age group
+Casablanca (1942),4.428571428571429,28,0.7651160895179715,Adults (35+),Trending among this age group
+"Usual Suspects, The (1995)",4.111111111111111,58,0.7602429521118285,Adults (35+),Trending among this age group
+Star Wars: Episode IV - A New Hope (1977),4.173913043478261,74,0.7581045207522723,Adults (35+),Trending among this age group
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.111111111111111,60,0.740693847021522,Adults (35+),Trending among this age group
+"Dark Knight, The (2008)",4.166666666666667,40,0.7364175566156874,Adults (35+),Trending among this age group
+"Silence of the Lambs, The (1991)",3.909090909090909,84,0.7320967448653459,Adults (35+),Trending among this age group
+"Princess Bride, The (1987)",4.184210526315789,39,0.7318817937449341,Adults (35+),Trending among this age group
+Schindler's List (1993),4.12962962962963,61,0.7277546746362344,Adults (35+),Trending among this age group
+"Godfather: Part II, The (1974)",4.35,38,0.7146229149652271,Adults (35+),Trending among this age group
+One Flew Over the Cuckoo's Nest (1975),4.3,42,0.7135160438071728,Adults (35+),Trending among this age group
+Fargo (1996),4.204545454545454,56,0.7099392059709,Adults (35+),Trending among this age group
+Forrest Gump (1994),4.013888888888889,99,0.7041083971110313,Adults (35+),Trending among this age group
+Taxi Driver (1976),4.416666666666667,29,0.6838755824782584,Adults (35+),Trending among this age group
+Star Wars: Episode V - The Empire Strikes Back (1980),4.05,62,0.6759411747403172,Adults (35+),Trending among this age group
+"Godfather, The (1972)",4.25,57,0.6736776837309474,Adults (35+),Trending among this age group
+"Fugitive, The (1993)",4.023809523809524,54,0.6735808009985143,Adults (35+),Trending among this age group
+Rear Window (1954),4.2,23,0.6569519288141381,Adults (35+),Trending among this age group
+"Shawshank Redemption, The (1994)",4.785714285714286,94,0.9543743001277848,Kids (5-12),Trending among this age group
+Saving Private Ryan (1998),4.285714285714286,55,0.7950421811296364,Kids (5-12),Trending among this age group
+Star Wars: Episode VI - Return of the Jedi (1983),4.1875,60,0.7897323567184049,Kids (5-12),Trending among this age group
+Casablanca (1942),4.833333333333333,28,0.7651160895179715,Kids (5-12),Trending among this age group
+"Usual Suspects, The (1995)",4.125,58,0.7602429521118286,Kids (5-12),Trending among this age group
+Star Wars: Episode IV - A New Hope (1977),3.611111111111111,74,0.7581045207522723,Kids (5-12),Trending among this age group
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),3.8333333333333335,60,0.740693847021522,Kids (5-12),Trending among this age group
+"Dark Knight, The (2008)",4.5,40,0.7364175566156874,Kids (5-12),Trending among this age group
+"Silence of the Lambs, The (1991)",4.041666666666667,84,0.732096744865346,Kids (5-12),Trending among this age group
+"Princess Bride, The (1987)",4.375,39,0.7318817937449341,Kids (5-12),Trending among this age group
+Schindler's List (1993),4.375,61,0.7277546746362343,Kids (5-12),Trending among this age group
+"Godfather: Part II, The (1974)",4.214285714285714,38,0.7146229149652271,Kids (5-12),Trending among this age group
+One Flew Over the Cuckoo's Nest (1975),4.111111111111111,42,0.7135160438071728,Kids (5-12),Trending among this age group
+Fargo (1996),4.454545454545454,56,0.7099392059709,Kids (5-12),Trending among this age group
+Forrest Gump (1994),4.09375,99,0.7041083971110313,Kids (5-12),Trending among this age group
+Taxi Driver (1976),4.7,29,0.6838755824782583,Kids (5-12),Trending among this age group
+Star Wars: Episode V - The Empire Strikes Back (1980),3.611111111111111,62,0.6759411747403172,Kids (5-12),Trending among this age group
+"Godfather, The (1972)",4.277777777777778,57,0.6736776837309474,Kids (5-12),Trending among this age group
+"Fugitive, The (1993)",3.888888888888889,54,0.6735808009985143,Kids (5-12),Trending among this age group
+Rear Window (1954),4.3,23,0.6569519288141381,Kids (5-12),Trending among this age group
+"Shawshank Redemption, The (1994)",4.423076923076923,94,0.9543743001277848,Teens (13-17),Trending among this age group
+Saving Private Ryan (1998),4.2,55,0.7950421811296364,Teens (13-17),Trending among this age group
+Star Wars: Episode VI - Return of the Jedi (1983),4.3,60,0.7897323567184049,Teens (13-17),Trending among this age group
+Casablanca (1942),4.5,28,0.7651160895179715,Teens (13-17),Trending among this age group
+"Usual Suspects, The (1995)",4.222222222222222,58,0.7602429521118286,Teens (13-17),Trending among this age group
+Star Wars: Episode IV - A New Hope (1977),4.3,74,0.7581045207522723,Teens (13-17),Trending among this age group
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.2272727272727275,60,0.740693847021522,Teens (13-17),Trending among this age group
+"Dark Knight, The (2008)",4.357142857142857,40,0.7364175566156874,Teens (13-17),Trending among this age group
+"Silence of the Lambs, The (1991)",4.4,84,0.7320967448653459,Teens (13-17),Trending among this age group
+"Princess Bride, The (1987)",4.5,39,0.7318817937449341,Teens (13-17),Trending among this age group
+Schindler's List (1993),4.45,61,0.7277546746362343,Teens (13-17),Trending among this age group
+"Godfather: Part II, The (1974)",4.071428571428571,38,0.7146229149652271,Teens (13-17),Trending among this age group
+One Flew Over the Cuckoo's Nest (1975),3.8333333333333335,42,0.7135160438071728,Teens (13-17),Trending among this age group
+Fargo (1996),4.25,56,0.7099392059708999,Teens (13-17),Trending among this age group
+Forrest Gump (1994),4.235294117647059,99,0.7041083971110313,Teens (13-17),Trending among this age group
+Taxi Driver (1976),4.333333333333333,29,0.6838755824782584,Teens (13-17),Trending among this age group
+Star Wars: Episode V - The Empire Strikes Back (1980),4.115384615384615,62,0.6759411747403171,Teens (13-17),Trending among this age group
+"Godfather, The (1972)",3.7,57,0.6736776837309474,Teens (13-17),Trending among this age group
+"Fugitive, The (1993)",4.2727272727272725,54,0.6735808009985143,Teens (13-17),Trending among this age group
+Rear Window (1954),4.833333333333333,23,0.6569519288141381,Teens (13-17),Trending among this age group
+"Shawshank Redemption, The (1994)",4.35,94,0.9543743001277848,Young Adults (18-35),Trending among this age group
+Saving Private Ryan (1998),4.357142857142857,55,0.7950421811296364,Young Adults (18-35),Trending among this age group
+Star Wars: Episode VI - Return of the Jedi (1983),4.42,60,0.7897323567184048,Young Adults (18-35),Trending among this age group
+Casablanca (1942),4.071428571428571,28,0.7651160895179715,Young Adults (18-35),Trending among this age group
+"Usual Suspects, The (1995)",4.678571428571429,58,0.7602429521118286,Young Adults (18-35),Trending among this age group
+Star Wars: Episode IV - A New Hope (1977),4.444444444444445,74,0.7581045207522723,Young Adults (18-35),Trending among this age group
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.578947368421052,60,0.740693847021522,Young Adults (18-35),Trending among this age group
+"Dark Knight, The (2008)",4.34375,40,0.7364175566156874,Young Adults (18-35),Trending among this age group
+"Silence of the Lambs, The (1991)",4.416666666666667,84,0.732096744865346,Young Adults (18-35),Trending among this age group
+"Princess Bride, The (1987)",4.416666666666667,39,0.7318817937449341,Young Adults (18-35),Trending among this age group
+Schindler's List (1993),4.208333333333333,61,0.7277546746362343,Young Adults (18-35),Trending among this age group
+"Godfather: Part II, The (1974)",4.285714285714286,38,0.7146229149652271,Young Adults (18-35),Trending among this age group
+One Flew Over the Cuckoo's Nest (1975),4.25,42,0.7135160438071728,Young Adults (18-35),Trending among this age group
+Fargo (1996),3.727272727272727,56,0.7099392059709,Young Adults (18-35),Trending among this age group
+Forrest Gump (1994),4.016666666666667,99,0.7041083971110313,Young Adults (18-35),Trending among this age group
+Taxi Driver (1976),3.7777777777777777,29,0.6838755824782583,Young Adults (18-35),Trending among this age group
+Star Wars: Episode V - The Empire Strikes Back (1980),4.4,62,0.6759411747403172,Young Adults (18-35),Trending among this age group
+"Godfather, The (1972)",4.361111111111111,57,0.6736776837309474,Young Adults (18-35),Trending among this age group
+"Fugitive, The (1993)",4.115384615384615,54,0.6735808009985143,Young Adults (18-35),Trending among this age group
+Rear Window (1954),4.0,23,0.6569519288141381,Young Adults (18-35),Trending among this age group

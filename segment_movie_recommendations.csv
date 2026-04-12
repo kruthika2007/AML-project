@@ -1,0 +1,81 @@
+title,avg_user_rating,rating_count,hybrid_score,recommended_for_cluster,reason
+"Shawshank Redemption, The (1994)",4.621212121212121,94,0.9543743001277848,0,Popular & highly rated within this segment
+Saving Private Ryan (1998),4.2272727272727275,55,0.7950421811296363,0,Popular & highly rated within this segment
+Star Wars: Episode VI - Return of the Jedi (1983),4.481481481481482,60,0.789732356718405,0,Popular & highly rated within this segment
+Casablanca (1942),4.571428571428571,28,0.7651160895179715,0,Popular & highly rated within this segment
+"Usual Suspects, The (1995)",4.444444444444445,58,0.7602429521118286,0,Popular & highly rated within this segment
+Star Wars: Episode IV - A New Hope (1977),4.21875,74,0.7581045207522723,0,Popular & highly rated within this segment
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.1923076923076925,60,0.7406938470215219,0,Popular & highly rated within this segment
+"Dark Knight, The (2008)",4.392857142857143,40,0.7364175566156874,0,Popular & highly rated within this segment
+"Silence of the Lambs, The (1991)",4.354838709677419,84,0.7320967448653459,0,Popular & highly rated within this segment
+"Princess Bride, The (1987)",4.4375,39,0.7318817937449341,0,Popular & highly rated within this segment
+Schindler's List (1993),4.5,61,0.7277546746362343,0,Popular & highly rated within this segment
+"Godfather: Part II, The (1974)",4.3,38,0.7146229149652271,0,Popular & highly rated within this segment
+One Flew Over the Cuckoo's Nest (1975),4.075,42,0.7135160438071728,0,Popular & highly rated within this segment
+Fargo (1996),4.5,56,0.7099392059709,0,Popular & highly rated within this segment
+Forrest Gump (1994),4.315789473684211,99,0.7041083971110313,0,Popular & highly rated within this segment
+Taxi Driver (1976),4.45,29,0.6838755824782583,0,Popular & highly rated within this segment
+Star Wars: Episode V - The Empire Strikes Back (1980),4.074074074074074,62,0.6759411747403172,0,Popular & highly rated within this segment
+"Godfather, The (1972)",4.083333333333333,57,0.6736776837309474,0,Popular & highly rated within this segment
+"Fugitive, The (1993)",4.2368421052631575,54,0.6735808009985143,0,Popular & highly rated within this segment
+Rear Window (1954),4.45,23,0.6569519288141381,0,Popular & highly rated within this segment
+"Shawshank Redemption, The (1994)",4.305555555555555,94,0.9543743001277848,1,Popular & highly rated within this segment
+Saving Private Ryan (1998),3.857142857142857,55,0.7950421811296364,1,Popular & highly rated within this segment
+Star Wars: Episode VI - Return of the Jedi (1983),4.142857142857143,60,0.7897323567184049,1,Popular & highly rated within this segment
+Casablanca (1942),4.0,28,0.7651160895179715,1,Popular & highly rated within this segment
+"Usual Suspects, The (1995)",4.1875,58,0.7602429521118286,1,Popular & highly rated within this segment
+Star Wars: Episode IV - A New Hope (1977),4.041666666666667,74,0.7581045207522723,1,Popular & highly rated within this segment
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.4375,60,0.740693847021522,1,Popular & highly rated within this segment
+"Dark Knight, The (2008)",3.9444444444444446,40,0.7364175566156874,1,Popular & highly rated within this segment
+"Silence of the Lambs, The (1991)",3.7,84,0.7320967448653459,1,Popular & highly rated within this segment
+"Princess Bride, The (1987)",4.0,39,0.7318817937449341,1,Popular & highly rated within this segment
+Schindler's List (1993),3.4166666666666665,61,0.7277546746362343,1,Popular & highly rated within this segment
+"Godfather: Part II, The (1974)",3.8333333333333335,38,0.7146229149652271,1,Popular & highly rated within this segment
+One Flew Over the Cuckoo's Nest (1975),4.666666666666667,42,0.7135160438071728,1,Popular & highly rated within this segment
+Fargo (1996),3.6875,56,0.7099392059709,1,Popular & highly rated within this segment
+Forrest Gump (1994),3.6666666666666665,99,0.7041083971110313,1,Popular & highly rated within this segment
+Taxi Driver (1976),3.0,29,0.6838755824782583,1,Popular & highly rated within this segment
+Star Wars: Episode V - The Empire Strikes Back (1980),4.3,62,0.6759411747403172,1,Popular & highly rated within this segment
+"Godfather, The (1972)",4.083333333333333,57,0.6736776837309474,1,Popular & highly rated within this segment
+"Fugitive, The (1993)",3.7857142857142856,54,0.6735808009985143,1,Popular & highly rated within this segment
+Rear Window (1954),3.5,23,0.6569519288141381,1,Popular & highly rated within this segment
+"Shawshank Redemption, The (1994)",4.2368421052631575,94,0.9543743001277848,2,Popular & highly rated within this segment
+Saving Private Ryan (1998),4.46875,55,0.7950421811296364,2,Popular & highly rated within this segment
+Star Wars: Episode VI - Return of the Jedi (1983),4.176470588235294,60,0.7897323567184049,2,Popular & highly rated within this segment
+Casablanca (1942),4.277777777777778,28,0.7651160895179715,2,Popular & highly rated within this segment
+"Usual Suspects, The (1995)",4.088235294117647,58,0.7602429521118286,2,Popular & highly rated within this segment
+Star Wars: Episode IV - A New Hope (1977),4.4,74,0.7581045207522723,2,Popular & highly rated within this segment
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.266666666666667,60,0.740693847021522,2,Popular & highly rated within this segment
+"Dark Knight, The (2008)",4.2,40,0.7364175566156874,2,Popular & highly rated within this segment
+"Silence of the Lambs, The (1991)",4.204545454545454,84,0.7320967448653459,2,Popular & highly rated within this segment
+"Princess Bride, The (1987)",4.375,39,0.7318817937449341,2,Popular & highly rated within this segment
+Schindler's List (1993),3.911764705882353,61,0.7277546746362343,2,Popular & highly rated within this segment
+"Godfather: Part II, The (1974)",4.214285714285714,38,0.7146229149652271,2,Popular & highly rated within this segment
+One Flew Over the Cuckoo's Nest (1975),4.136363636363637,42,0.7135160438071728,2,Popular & highly rated within this segment
+Fargo (1996),3.8214285714285716,56,0.7099392059709,2,Popular & highly rated within this segment
+Forrest Gump (1994),3.9130434782608696,99,0.7041083971110313,2,Popular & highly rated within this segment
+Taxi Driver (1976),4.285714285714286,29,0.6838755824782583,2,Popular & highly rated within this segment
+Star Wars: Episode V - The Empire Strikes Back (1980),4.225,62,0.6759411747403172,2,Popular & highly rated within this segment
+"Godfather, The (1972)",4.294117647058823,57,0.6736776837309474,2,Popular & highly rated within this segment
+"Fugitive, The (1993)",3.9375,54,0.6735808009985143,2,Popular & highly rated within this segment
+Rear Window (1954),4.3,23,0.6569519288141381,2,Popular & highly rated within this segment
+"Shawshank Redemption, The (1994)",4.395833333333333,94,0.9543743001277848,3,Popular & highly rated within this segment
+Saving Private Ryan (1998),4.45,55,0.7950421811296364,3,Popular & highly rated within this segment
+Star Wars: Episode VI - Return of the Jedi (1983),3.9444444444444446,60,0.7897323567184049,3,Popular & highly rated within this segment
+Casablanca (1942),4.5,28,0.7651160895179715,3,Popular & highly rated within this segment
+"Usual Suspects, The (1995)",4.3,58,0.7602429521118286,3,Popular & highly rated within this segment
+Star Wars: Episode IV - A New Hope (1977),4.15,74,0.7581045207522723,3,Popular & highly rated within this segment
+Raiders of the Lost Ark (Indiana Jones and the Raiders of the Lost Ark) (1981),4.090909090909091,60,0.740693847021522,3,Popular & highly rated within this segment
+"Dark Knight, The (2008)",4.642857142857143,40,0.7364175566156874,3,Popular & highly rated within this segment
+"Silence of the Lambs, The (1991)",4.15625,84,0.7320967448653459,3,Popular & highly rated within this segment
+"Princess Bride, The (1987)",4.05,39,0.7318817937449341,3,Popular & highly rated within this segment
+Schindler's List (1993),4.5625,61,0.7277546746362343,3,Popular & highly rated within this segment
+"Godfather: Part II, The (1974)",4.416666666666667,38,0.7146229149652271,3,Popular & highly rated within this segment
+One Flew Over the Cuckoo's Nest (1975),4.3125,42,0.7135160438071728,3,Popular & highly rated within this segment
+Fargo (1996),4.34375,56,0.7099392059709,3,Popular & highly rated within this segment
+Forrest Gump (1994),4.205882352941177,99,0.7041083971110313,3,Popular & highly rated within this segment
+Taxi Driver (1976),4.625,29,0.6838755824782583,3,Popular & highly rated within this segment
+Star Wars: Episode V - The Empire Strikes Back (1980),3.9,62,0.6759411747403172,3,Popular & highly rated within this segment
+"Godfather, The (1972)",4.35,57,0.6736776837309474,3,Popular & highly rated within this segment
+"Fugitive, The (1993)",4.166666666666667,54,0.6735808009985144,3,Popular & highly rated within this segment
+Rear Window (1954),4.071428571428571,23,0.6569519288141381,3,Popular & highly rated within this segment
