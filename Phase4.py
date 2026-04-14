@@ -19,106 +19,75 @@ data = ratings.merge(movies, on="movieId")
 data = data.merge(customers[['user_id','cluster','age_group']], on="user_id")
 
 # =====================================================
-# MOVIE STATISTICS
+# HELPER — compute per-group hybrid scores
 # =====================================================
-print("Calculating movie statistics...")
+def top_movies_for_group(group_data, n=20):
+    stats = group_data.groupby("title").agg(
+        avg_user_rating=("rating", "mean"),
+        rating_count=("rating", "count"),
+        rating_std=("rating", "std"),
+    ).reset_index()
+    stats.fillna(0, inplace=True)
 
-movie_stats = data.groupby("title").agg(
-    avg_rating=("rating","mean"),
-    rating_count=("rating","count"),
-    rating_std=("rating","std")
-).reset_index()
+    # Drop movies with too few ratings within this group
+    min_votes = max(5, int(stats["rating_count"].quantile(0.40)))
+    stats = stats[stats["rating_count"] >= min_votes]
+    stats = stats[stats["avg_user_rating"] > 3.0]
 
-movie_stats.fillna(0, inplace=True)
+    if stats.empty:
+        return stats
 
-C = movie_stats["avg_rating"].mean()
-m = movie_stats["rating_count"].quantile(0.60)
+    C = stats["avg_user_rating"].mean()
+    m = stats["rating_count"].quantile(0.60)
 
-def weighted_rating(row):
-    v = row["rating_count"]
-    R = row["avg_rating"]
-    return (v/(v+m)*R) + (m/(m+v)*C)
+    stats["weighted_rating"] = stats.apply(
+        lambda r: (r["rating_count"] / (r["rating_count"] + m) * r["avg_user_rating"])
+                  + (m / (r["rating_count"] + m) * C),
+        axis=1,
+    )
+    stats["popularity_score"] = stats["avg_user_rating"] * np.log1p(stats["rating_count"])
+    stats["consistency_score"] = 1 / (1 + stats["rating_std"])
 
-movie_stats["weighted_rating"] = movie_stats.apply(weighted_rating, axis=1)
+    for col in ["weighted_rating", "popularity_score", "consistency_score"]:
+        rng = stats[col].max() - stats[col].min()
+        stats[col] = (stats[col] - stats[col].min()) / rng if rng > 0 else 0.0
 
-# Remove weak movies
-movie_stats = movie_stats[movie_stats["rating_count"] > 20]
-movie_stats = movie_stats[movie_stats["avg_rating"] > 3.2]
+    stats["hybrid_score"] = (
+        0.5 * stats["weighted_rating"]
+        + 0.3 * stats["popularity_score"]
+        + 0.2 * stats["consistency_score"]
+    )
 
-# Popularity + Consistency scores
-movie_stats["popularity_score"] = movie_stats["avg_rating"] * np.log1p(movie_stats["rating_count"])
-movie_stats["consistency_score"] = 1 / (1 + movie_stats["rating_std"])
+    return stats.sort_values("hybrid_score", ascending=False).head(n)
 
-# Normalize scores
-for col in ["weighted_rating","popularity_score","consistency_score"]:
-    movie_stats[col] = (movie_stats[col]-movie_stats[col].min())/(movie_stats[col].max()-movie_stats[col].min())
-
-# Final Hybrid Score
-movie_stats["hybrid_score"] = (
-      0.5 * movie_stats["weighted_rating"]
-    + 0.3 * movie_stats["popularity_score"]
-    + 0.2 * movie_stats["consistency_score"]
-)
-
-data = data.merge(movie_stats, on="title")
 
 # =====================================================
-# SEGMENT RECOMMENDATIONS
+# SEGMENT RECOMMENDATIONS (per-cluster scores)
 # =====================================================
 print("\nGenerating segment recommendations...")
 
 segment_outputs = []
-clusters = sorted(data["cluster"].unique())
-
-for cl in clusters:
-    seg_data = data[data["cluster"] == cl]
-
-    top_movies = (
-        seg_data.groupby("title")
-        .agg(
-            avg_user_rating=("rating","mean"),
-            rating_count=("rating_count","first"),
-            hybrid_score=("hybrid_score","mean")
-        )
-        .reset_index()
-        .sort_values("hybrid_score", ascending=False)
-        .head(20)
-    )
-
-    top_movies["recommended_for_cluster"] = cl
-    top_movies["reason"] = "Popular & highly rated within this segment"
-    segment_outputs.append(top_movies)
+for cl in sorted(data["cluster"].unique()):
+    top = top_movies_for_group(data[data["cluster"] == cl])
+    top["recommended_for_cluster"] = cl
+    top["reason"] = "Popular & highly rated within this segment"
+    segment_outputs.append(top)
 
 segment_df = pd.concat(segment_outputs)
 segment_df.to_csv("segment_movie_recommendations.csv", index=False)
 print("Segment recommendations saved.")
 
 # =====================================================
-# AGE GROUP RECOMMENDATIONS
+# AGE GROUP RECOMMENDATIONS (per-age-group scores)
 # =====================================================
 print("\nGenerating age group recommendations...")
 
 age_outputs = []
-ages = sorted(data["age_group"].unique())
-
-for age in ages:
-    age_data = data[data["age_group"] == age]
-
-    top_movies = (
-        age_data.groupby("title")
-        .agg(
-            avg_user_rating=("rating","mean"),
-            rating_count=("rating_count","first"),
-            hybrid_score=("hybrid_score","mean")
-        )
-        .reset_index()
-        .sort_values("hybrid_score", ascending=False)
-        .head(20)
-    )
-
-    top_movies["recommended_for_age_group"] = age
-    top_movies["reason"] = "Trending among this age group"
-    age_outputs.append(top_movies)
+for age in sorted(data["age_group"].unique()):
+    top = top_movies_for_group(data[data["age_group"] == age])
+    top["recommended_for_age_group"] = age
+    top["reason"] = "Trending among this age group"
+    age_outputs.append(top)
 
 age_df = pd.concat(age_outputs)
 age_df.to_csv("age_group_recommendations.csv", index=False)
@@ -129,7 +98,7 @@ print("Age group recommendations saved.")
 # =====================================================
 print("\nGenerating global top movies...")
 
-global_top = movie_stats.sort_values("hybrid_score", ascending=False).head(30)
+global_top = top_movies_for_group(data, n=30)
 global_top["reason"] = "Top movies overall"
 global_top.to_csv("global_top_movies.csv", index=False)
 print("Global recommendations saved.")
@@ -143,28 +112,28 @@ plt.figure(figsize=(14,10))
 
 # Plot 1 – Rating vs Popularity
 plt.subplot(2,2,1)
-plt.scatter(movie_stats["avg_rating"], movie_stats["rating_count"])
+plt.scatter(global_top["avg_rating"], global_top["rating_count"])
 plt.title("Rating vs Popularity")
 plt.xlabel("Average Rating")
 plt.ylabel("Number of Ratings")
 
 # Plot 2 – Hybrid Score Distribution
 plt.subplot(2,2,2)
-plt.hist(movie_stats["hybrid_score"], bins=30)
+plt.hist(global_top["hybrid_score"], bins=30)
 plt.title("Hybrid Score Distribution")
 plt.xlabel("Hybrid Score")
 plt.ylabel("Movies")
 
 # Plot 3 – Popularity Distribution
 plt.subplot(2,2,3)
-plt.hist(movie_stats["rating_count"], bins=30)
+plt.hist(global_top["rating_count"], bins=30)
 plt.title("Movie Popularity Distribution")
 plt.xlabel("Number of Ratings")
 plt.ylabel("Movies")
 
 # Plot 4 – Rating Distribution
 plt.subplot(2,2,4)
-plt.hist(movie_stats["avg_rating"], bins=30)
+plt.hist(global_top["avg_rating"], bins=30)
 plt.title("Average Rating Distribution")
 plt.xlabel("Average Rating")
 plt.ylabel("Movies")
