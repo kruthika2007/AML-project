@@ -3,7 +3,7 @@ from flask_cors import CORS
 import pandas as pd
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:5173", "http://localhost:5174"])
 
 # Load data once at startup
 age_group_recs = pd.read_csv("age_group_recommendations.csv")
